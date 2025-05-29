@@ -16,12 +16,7 @@ int main() {
     std::cin.width(BUFFER_SIZE);
     std::cin >> maybeLargeInput;
 
-    if (maybeLargeInput == nullptr) {
-        std::cerr << "Error: Input is null." << std::endl;
-        delete[] maybeLargeInput;
-        return 1;
-    }
-    else if (strlen(maybeLargeInput) >= BUFFER_SIZE) {
+    if (strlen(maybeLargeInput) >= BUFFER_SIZE) {
         std::cerr << "Error: Input exceeds buffer size." << std::endl;
         delete[] maybeLargeInput;
         return 1;

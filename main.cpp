@@ -7,8 +7,9 @@ void vulnerableFunction(const char* input) {
     std::cout << "Input was: " << buffer << std::endl;
 }
 
-int main() {
-    const char* largeInput = "ThisInputIsTooLong";
-    vulnerableFunction(largeInput);
+int main(int argc, char* argv[]) {
+    if (argc > 1) {
+        vulnerableFunction(argv[1]);  // user-controlled input
+    }
     return 0;
 }

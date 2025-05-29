@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 
-const int = 10;
+const int BUFFER_SIZE = 10;
 
 void vulnerableFunction(char* input) {
     char buffer[BUFFER_SIZE];

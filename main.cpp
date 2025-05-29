@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 
-void vulnerableFunction(std:string input) {
+void vulnerableFunction(char* input) {
     char buffer[10];
     strcpy(buffer, input);
     std::cout << "Input was: " << buffer << std::endl;
@@ -10,7 +10,7 @@ void vulnerableFunction(std:string input) {
 int main() {
 
     // Declare the variables
-    std::string maybeLargeInput;
+    char* maybeLargeInput;
 
     // Read input
     std::cout << "Enter your name. Maximum 9 digits: ";

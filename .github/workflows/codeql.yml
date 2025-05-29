@@ -29,8 +29,9 @@ jobs:
       with:
         languages: ${{ matrix.language }}
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v2
+    - name: Build with g++
+      run: |
+        g++ -std=c++17 -g -o main main.cpp
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2

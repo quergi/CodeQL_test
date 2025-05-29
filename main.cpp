@@ -7,9 +7,15 @@ void vulnerableFunction(const char* input) {
     std::cout << "Input was: " << buffer << std::endl;
 }
 
-int main(int argc, char* argv[]) {
-    if (argc > 1) {
-        vulnerableFunction(argv[1]);  // user-controlled input
-    }
+int main() {
+
+    // Declare the variables
+    std::string maybeLargeInput;
+
+    // Read input
+    std::cout << "Enter your name. Maximum 9 digits: ";
+    std::cin >> maybeLargeInput;
+
+    vulnerableFunction(maybeLargeInput);
     return 0;
 }

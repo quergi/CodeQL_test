@@ -13,16 +13,9 @@ int main() {
     char* maybeLargeInput = new char[BUFFER_SIZE];
 
     std::cout << "Enter your name. Maximum 9 characters: ";
-    std::cin.width(BUFFER_SIZE);
     std::cin >> maybeLargeInput;
 
-    if (strlen(maybeLargeInput) >= BUFFER_SIZE) {
-        std::cerr << "Error: Input exceeds buffer size." << std::endl;
-        delete[] maybeLargeInput;
-        return 1;
-    } else {
-        vulnerableFunction(maybeLargeInput);
-    }
+    vulnerableFunction(maybeLargeInput);
 
     std::cout << "Program completed successfully." << std::endl;
 
